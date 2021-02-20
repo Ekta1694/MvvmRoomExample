@@ -50,7 +50,11 @@ class GalleryFragment : Fragment(), Observer {
     private fun setupListGalleryView(recyclergallery: RecyclerView) {
         val adapter = GalleryAdapter()
 
-        val manager:GridLayoutManager
+        val manager: GridLayoutManager
+
+
+        // function for getting screen density of android
+        
 
         val densityDpi = resources.displayMetrics.densityDpi
 
@@ -60,11 +64,11 @@ class GalleryFragment : Fragment(), Observer {
                 manager = GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(3)
                 recyclergallery.addItemDecoration(
-            RecyclerItemDecoration(
-                resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                3
-            )
-            )
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        3
+                    )
+                )
                 println("i am ldpi screen")
             }
 
@@ -74,10 +78,10 @@ class GalleryFragment : Fragment(), Observer {
                 manager = GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(3)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    3
-                )
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        3
+                    )
                 )
             }
             DisplayMetrics.DENSITY_TV -> {
@@ -85,10 +89,10 @@ class GalleryFragment : Fragment(), Observer {
                 manager = GridLayoutManager(activity, 5, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(5)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    5
-                )
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        5
+                    )
                 )
             }
 
@@ -99,115 +103,114 @@ class GalleryFragment : Fragment(), Observer {
                 manager = GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(3)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    3
-                )
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        3
+                    )
                 )
             }
             DisplayMetrics.DENSITY_XHIGH -> {
                 println("i am DENSITY_XHIGH screen")
-                manager= GridLayoutManager(activity, 5, GridLayoutManager.VERTICAL, false)
+                manager = GridLayoutManager(activity, 5, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(5)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    5
-                )
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        5
+                    )
                 )
             }
             DisplayMetrics.DENSITY_280 -> { // XHDPI
-            println("i am xhdpi screen")
-                manager= GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
+                println("i am xhdpi screen")
+                manager = GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(4)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    4
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        4
+                    )
                 )
-                )
-        }
-            DisplayMetrics.DENSITY_XXHIGH ->
-            {
+            }
+            DisplayMetrics.DENSITY_XXHIGH -> {
                 println("i am DENSITY_XXHIGH screen")
-                manager= GridLayoutManager(activity, 5, GridLayoutManager.VERTICAL, false)
+                manager = GridLayoutManager(activity, 5, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(5)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    5
-                )
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        5
+                    )
                 )
 
             }
 
             DisplayMetrics.DENSITY_360 -> {
                 println("i am DENSITY_360 screen")
-                manager= GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
+                manager = GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
 
                 adapter.setcount(4)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    4
-                )
-                )
-            }
-                DisplayMetrics.DENSITY_400 -> {
-            println("i am DENSITY_400 screen")
-                    manager= GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
-                    adapter.setcount(4)
-                    recyclergallery.addItemDecoration(
                     RecyclerItemDecoration(
                         resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
                         4
                     )
-                    )
-        }
-            DisplayMetrics.DENSITY_420 ->
-            {
-                // XXHDPI
-                println("i am xxhdpi screen")
-                manager= GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
+                )
+            }
+            DisplayMetrics.DENSITY_400 -> {
+                println("i am DENSITY_400 screen")
+                manager = GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(4)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    4
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        4
+                    )
                 )
+            }
+            DisplayMetrics.DENSITY_420 -> {
+                // XXHDPI
+                println("i am xxhdpi screen")
+                manager = GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
+                adapter.setcount(4)
+                recyclergallery.addItemDecoration(
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        4
+                    )
                 )
             }
             DisplayMetrics.DENSITY_XXXHIGH -> {
                 println("i am DENSITY_XXXHIGH screen")
-                manager= GridLayoutManager(activity, 5, GridLayoutManager.VERTICAL, false)
+                manager = GridLayoutManager(activity, 5, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(5)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    5
-                )
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        5
+                    )
                 )
             }
-            DisplayMetrics.DENSITY_560 ->
-            {
+            DisplayMetrics.DENSITY_560 -> {
                 println("i am xxxhdpi screen")
-                manager= GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
+                manager = GridLayoutManager(activity, 4, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(4)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    4)
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        4
+                    )
                 )
             }// XXXHDPI
-            else ->
-            {
+            else -> {
                 println("i am in default")
-                manager= GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL, false)
+                manager = GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL, false)
                 adapter.setcount(3)
                 recyclergallery.addItemDecoration(
-                RecyclerItemDecoration(
-                    resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
-                    3))
+                    RecyclerItemDecoration(
+                        resources.getDimensionPixelSize(R.dimen.photos_list_spacing),
+                        3
+                    )
+                )
 
             }
         }
