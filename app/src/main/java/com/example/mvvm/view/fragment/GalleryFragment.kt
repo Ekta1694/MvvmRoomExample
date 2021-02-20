@@ -245,4 +245,9 @@ class GalleryFragment : Fragment(), Observer {
         }
     }
 
+    fun showToast()
+    {
+        Toast.makeText(activity,"I am fun",Toast.LENGTH_SHORT).show()
+    }
+
 }
