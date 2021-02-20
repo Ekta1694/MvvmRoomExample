@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">-MvvmArchKotlin</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="error_loading_people">There seems to have been some error.</string>
+    <string name="default_loading_people">Press the button to load people!</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">SlideShow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="action_settings">Settings</string>
+</resources>
